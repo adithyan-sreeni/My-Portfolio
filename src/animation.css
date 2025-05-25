@@ -1,0 +1,16 @@
+.fade-up-animation {
+  animation: fadeup 0.3s linear;
+  animation-timeline: view();
+  /* animation-range: entry 0% cover 40%; */
+}
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+

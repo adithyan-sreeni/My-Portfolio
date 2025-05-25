@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* user-select: none; Prevents text selection */
+  caret-color: transparent;
+}
+/* Intro */
+.intro-page {
+  width: 100%;
+  /* text-align: center; */
+  height: 95vh;
+  background-color: #011f41;
+  display: flex;
+  /* justify-content: center; */
+  /* align-self: center; */
+  /* align-items: center; */
+  padding: 25vh;
+  color: #ffffff;
+  font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
+  font-size: 55px;
+  /* imp change done */
+  /* min-width: 433px;   */
+}
+
+.scroll-down-indicator {
+  font-size: 25px;
+  background-color: #011f41;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #cccccc;
+  font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
+}
+
+.intro-text-name {
+  font-weight: 600;
+  margin-top: 8px;
+}
+.intro-text-desc {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #cccccc;
+}
+
+.intro-page img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.intro-content img {
+  padding: 5px;
+}
+@media (max-width: 450px) {
+  .intro-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #011f41;
+    display: flex;
+    justify-content: center;
+
+    color: #ffffff;
+    font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
+    font-size: 28px;
+  }
+  .intro-page .vector-man {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 45px;
+  }
+  .intro-text {
+    min-width: 250px;
+  }
+  .intro-text-desc {
+    margin-top: 10px;
+    /* width: 100%; */
+    font-size: 15px;
+    color: #cccccc;
+  }
+  .socials {
+    width: 40px;
+  }
+}
+
+/*********************************** monuments ************************/
+
+.monument {
+  height: 52vh;
+  /* min-width: 433px; */
+  background: url("./Monuments-page/monuments.svg"),
+    linear-gradient(to bottom, #011f41, #003976);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* animation: moveleft 10s infinite; */
+}
+@media (max-width: 450px) {
+  .monument {
+    height: 50vh;
+    /* min-width: 433px; */
+
+    background: url("./Monuments-page/monuments.svg"),
+      linear-gradient(to bottom, #011f41, #003976);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* .monument {
+  height: 52vh;
+  width: 100%; 
+  background: url("./Monuments-page/monuments.svg"),
+    linear-gradient(to bottom, #011f41, #003976);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 450px) {
+  .monument {
+    height: 50vh;
+    width: 100%; 
+    background: url("./Monuments-page/monuments.svg"),
+      linear-gradient(to bottom, #011f41, #003976);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+} */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* animations */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+.float2 {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float3 {
+  animation: float 2s ease-in-out infinite;
+}
+
+.float4 {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* animations */
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.hidden {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+/* animations */
+
+@keyframes moveleft {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
+@keyframes rotateOnScroll {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+[data-aos="custom-rotate"] {
+  opacity: 0; /* Initial state before animation */
+  transform: rotate(0deg);
+}
+
+[data-aos="custom-rotate"].aos-animate {
+  opacity: 1;
+  animation: rotateOnScroll 2s ease-in-out forwards; /* Custom animation */
+}

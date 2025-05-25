@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.about-page {
+  font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
+  height: auto;
+  /* height: auto; */
+  box-sizing: border-box;
+  background-color: #121212;
+  font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
+  width: 100%;
+  color: wheat;
+  /* color: white; */
+  /* z-index: -2; */
+  display: flex;
+  padding-top: 70px;
+}
+
+.about-page h1 {
+  transform-origin: left;
+  position: absolute;
+  font-size: 10vw;
+  padding-top: 100px;
+  margin-left: 100px;
+  color: #241f1f;
+  max-width: 800px;
+  margin: 0;
+  z-index: 1;
+}
+.about-page h2 {
+  margin-bottom: 30px;
+  font-size: 45px;
+  color: #cccccc;
+  /* z-index: 2;
+  position: relative; */
+}
+
+.about-page-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 12%;
+  /* background-color: red; */
+}
+.my-desc {
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 800px;
+  font-size: 25px;
+  align-self: center;
+  /* gap: 10px; */
+}
+@media (max-width: 450px) {
+  .about-page-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-page h1 {
+    visibility: hidden;
+  }
+  .about-page h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .my-desc {
+    font-size: 1.2rem;
+    padding: 30px;
+    margin-top: 10px;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .MyPortrait {
+    height: 290px;
+    width: 240px;
+  }
+}
