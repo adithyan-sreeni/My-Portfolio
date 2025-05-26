@@ -50,23 +50,66 @@
   font-size: 0.9em;
   color: #6cace4 !important;
 }
+
+.moving-border-container {
+  position: relative;
+  border-radius: 25px;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1, #0ea5e9);
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+  margin-top: 10px;
+  margin-left: -2px;
+}
+
+.moving-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 1px;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1, #0ea5e9);
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .live-demo {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
   color: #d4d8dd;
   background-color: #241f1f;
   text-decoration: none;
-  /* border: 10px solid 023268 !important; */
-  border: 2px solid #023268;
   border-radius: 25px;
-  margin-left: -2px;
-  transition: 0.4s;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
 }
 
 .live-demo:hover {
   background-color: #1d1919;
-  color: #4c6b8e;
+  color: #b1b1b1;
+  transform: translateY(-1px);
+}
+
+.live-demo:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 450px) {
@@ -75,7 +118,7 @@
     max-height: 700px; /* Limits the maximum height */
     /* height: ; */
   }
-  .card-image img{
+  .card-image img {
     min-height: 300px; /* Matches the tallest card (card with .card-image-1) */
     object-fit: cover;
   }

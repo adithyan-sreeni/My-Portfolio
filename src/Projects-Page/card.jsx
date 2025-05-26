@@ -14,14 +14,17 @@ const Card = ({ id, image, title, description, techStack, link }) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <p className="tech-stack">{techStack}</p>
-        <a
-          href={link}
-          className="live-demo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Live demo
-        </a>
+        <div className="moving-border-container">
+          <div className="moving-border"></div>
+          <a
+            href={link}
+            className="live-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live demo
+          </a>
+        </div>
       </div>
     </div>
   );

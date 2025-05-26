@@ -24,14 +24,17 @@ function ProjectPage({ projects }) {
         </div>
       </div>
       <div className="github-btn-flex">
-        <a
-          className="button github-button"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/adithyan-sreeni"
-        >
-          <i className="fab fa-github "></i> View All on GitHub
-        </a>
+        <div className="moving-border-container">
+          <div className="moving-border"></div>
+          <a
+            className="button github-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/adithyan-sreeni"
+          >
+            <i className="fab fa-github"></i> View All on GitHub
+          </a>
+        </div>
       </div>
     </div>
   );
