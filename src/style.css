@@ -10,13 +10,13 @@
 .intro-page {
   width: 100%;
   /* text-align: center; */
-  height: 95vh;
+  height: 95dvh;
   background-color: #011f41;
   display: flex;
   /* justify-content: center; */
   /* align-self: center; */
   /* align-items: center; */
-  padding: 25vh;
+  padding: 25dvh;
   color: #ffffff;
   font-family: "Tasa Orbiter", sans-serif; /* Fallback to sans-serif */
   font-size: 55px;
@@ -56,7 +56,7 @@
 @media (max-width: 450px) {
   .intro-page {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: #011f41;
     display: flex;
     justify-content: center;
@@ -87,7 +87,7 @@
 /*********************************** monuments ************************/
 
 .monument {
-  height: 52vh;
+  height: 52dvh;
   /* min-width: 433px; */
   background: url("./Monuments-page/monuments.svg"),
     linear-gradient(to bottom, #011f41, #003976);
@@ -99,9 +99,8 @@
 }
 @media (max-width: 450px) {
   .monument {
-    height: 50vh;
+    height: 50dvh;
     /* min-width: 433px; */
-
     background: url("./Monuments-page/monuments.svg"),
       linear-gradient(to bottom, #011f41, #003976);
     background-size: cover;

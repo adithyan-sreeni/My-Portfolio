@@ -9,13 +9,13 @@ export const Footer = () => {
   };
   const scrollTo150vh = () => {
     window.scrollTo({
-      top: window.innerHeight * 1.5, // Scrolls to 150% of the viewport height
+      top: window.innerHeight * 1.5, // Scrolls to 150% of the dynamic viewport height
       behavior: "smooth", // Adds smooth scrolling behavior
     });
   };
   const scrollUpSlightly = () => {
     window.scrollBy({
-      top: -window.innerHeight * 0.21, // Scroll up by 10% of the viewport height
+      top: -window.innerHeight * 0.21, // Scroll up by 21% of the dynamic viewport height
       behavior: "smooth", // Smooth scrolling effect
     });
   };

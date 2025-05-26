@@ -1,7 +1,7 @@
 export function Intro() {
   const scrollTo150vh = () => {
     window.scrollTo({
-      top: window.innerHeight * 1.53, // Scrolls to 150% of the viewport height
+      top: window.innerHeight * 1.53, // Scrolls to 153% of the dynamic viewport height
       behavior: "smooth", // Adds smooth scrolling behavior
     });
   };
